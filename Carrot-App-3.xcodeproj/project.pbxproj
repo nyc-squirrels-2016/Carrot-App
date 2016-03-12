@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		09CE598C1C938843004C7EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE598B1C938843004C7EF2 /* AppDelegate.swift */; };
-		09CE598E1C938843004C7EF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE598D1C938843004C7EF2 /* ViewController.swift */; };
+		09CE598E1C938843004C7EF2 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE598D1C938843004C7EF2 /* RecordSoundsViewController.swift */; };
 		09CE59911C938843004C7EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CE598F1C938843004C7EF2 /* Main.storyboard */; };
 		09CE59931C938843004C7EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CE59921C938843004C7EF2 /* Assets.xcassets */; };
 		09CE59961C938843004C7EF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CE59941C938843004C7EF2 /* LaunchScreen.storyboard */; };
 		09CE59A11C938843004C7EF2 /* Carrot_App_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE59A01C938843004C7EF2 /* Carrot_App_3Tests.swift */; };
+		09CE59AC1C939B2F004C7EF2 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE59AB1C939B2F004C7EF2 /* RecordedAudio.swift */; };
+		09CE59AE1C93A0B2004C7EF2 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE59AD1C93A0B2004C7EF2 /* PlaySoundsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		09CE59881C938843004C7EF2 /* Carrot-App-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrot-App-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CE598B1C938843004C7EF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09CE598D1C938843004C7EF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09CE598D1C938843004C7EF2 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		09CE59901C938843004C7EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09CE59921C938843004C7EF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09CE59951C938843004C7EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		09CE599C1C938843004C7EF2 /* Carrot-App-3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Carrot-App-3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CE59A01C938843004C7EF2 /* Carrot_App_3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot_App_3Tests.swift; sourceTree = "<group>"; };
 		09CE59A21C938843004C7EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09CE59AB1C939B2F004C7EF2 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
+		09CE59AD1C93A0B2004C7EF2 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				09CE598B1C938843004C7EF2 /* AppDelegate.swift */,
-				09CE598D1C938843004C7EF2 /* ViewController.swift */,
+				09CE598D1C938843004C7EF2 /* RecordSoundsViewController.swift */,
+				09CE59AB1C939B2F004C7EF2 /* RecordedAudio.swift */,
 				09CE598F1C938843004C7EF2 /* Main.storyboard */,
 				09CE59921C938843004C7EF2 /* Assets.xcassets */,
 				09CE59941C938843004C7EF2 /* LaunchScreen.storyboard */,
 				09CE59971C938843004C7EF2 /* Info.plist */,
+				09CE59AD1C93A0B2004C7EF2 /* PlaySoundsViewController.swift */,
 			);
 			path = "Carrot-App-3";
 			sourceTree = "<group>";
@@ -146,6 +152,7 @@
 				TargetAttributes = {
 					09CE59871C938843004C7EF2 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = K8HU92W3ZM;
 					};
 					09CE599B1C938843004C7EF2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -197,7 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09CE598E1C938843004C7EF2 /* ViewController.swift in Sources */,
+				09CE59AC1C939B2F004C7EF2 /* RecordedAudio.swift in Sources */,
+				09CE598E1C938843004C7EF2 /* RecordSoundsViewController.swift in Sources */,
+				09CE59AE1C93A0B2004C7EF2 /* PlaySoundsViewController.swift in Sources */,
 				09CE598C1C938843004C7EF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Carrot-App-3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Example.Carrot-App-3";
@@ -338,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Carrot-App-3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Example.Carrot-App-3";
@@ -388,6 +399,7 @@
 				09CE59A71C938843004C7EF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09CE59A81C938843004C7EF2 /* Build configuration list for PBXNativeTarget "Carrot-App-3Tests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +408,7 @@
 				09CE59AA1C938843004C7EF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
