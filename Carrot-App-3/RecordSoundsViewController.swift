@@ -76,7 +76,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     
                     self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
                     
-                    print(self.roomAverage)
+                    self.flowTest()
                     // prepareToRecord
                     // setMeteringEnabled
                     // record
@@ -89,6 +89,14 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         
     }
     
+    func flowTest()  {
+        print("Now in control flow")
+        if self.roomAverage > -20 {
+            print("Eat")
+        } else {
+            print("Don't")
+        }
+    }
     
     
 //    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
