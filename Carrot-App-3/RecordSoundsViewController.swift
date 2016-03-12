@@ -11,11 +11,19 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
+    @IBOutlet weak var eatTheCarrot: UILabel!
+    @IBOutlet weak var dontEatTheCarrot: UILabel!
     
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
     var roomAverage: Float = 0.0
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        eatTheCarrot.hidden = true
+        dontEatTheCarrot.hidden = true
+    }
+    
     @IBAction func recordButtonTapped() {
 //        print("Start Recording")
 //        
@@ -93,8 +101,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         print("Now in control flow")
         if self.roomAverage > -20 {
             print("Eat")
+            eatTheCarrot.hidden = false
         } else {
             print("Don't")
+            dontEatTheCarrot.hidden = false
         }
     }
     
