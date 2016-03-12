@@ -12,9 +12,9 @@ import AVFoundation
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     
-    var audioRecorder:AVAudioRecorder!
+    var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
-
+    var roomAverage: Float = 0.0
 
     @IBAction func recordButtonTapped() {
 //        print("Start Recording")
@@ -74,8 +74,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     sleep(4)
                     self.audioRecorder.updateMeters()
                     
-                    print(self.audioRecorder.averagePowerForChannel(0))
+                    self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
                     
+                    print(self.roomAverage)
                     // prepareToRecord
                     // setMeteringEnabled
                     // record
@@ -88,27 +89,19 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         
     }
     
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-        if flag {
-            //Save the recorded audio
-            recordedAudio = RecordedAudio(filePathURL: recorder.url, title: recorder.url.lastPathComponent!)
-            //Perform a segue to next scene
-            print("Okie Dokie")
-        } else {
-            print("Recording was not successful")
-        }
-    }
-
-//    @IBAction func stopRecording() {
-//        self.audioRecorder.updateMeters()
-//        audioRecorder.stop()
-//
-//        print(self.audioRecorder.averagePowerForChannel(0))
-//
-//        let audioSession = AVAudioSession.sharedInstance()
-//        try! audioSession.setActive(false)
-//        print("Stopping recording")
+    
+    
+//    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+//        if flag {
+//            //Save the recorded audio
+//            recordedAudio = RecordedAudio(filePathURL: recorder.url, title: recorder.url.lastPathComponent!)
+//            //Perform a segue to next scene
+//            print("Okie Dokie")
+//        } else {
+//            print("Recording was not successful")
+//        }
 //    }
+
     
 
 
