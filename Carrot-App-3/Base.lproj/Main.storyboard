@@ -36,12 +36,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carrot-2" translatesAutoresizingMaskIntoConstraints="NO" id="gPI-Hh-3qL">
+                                <rect key="frame" x="57" y="182" width="205" height="204"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="dontEatTheCarrot" destination="KNl-p7-xlx" id="MBS-Ct-Dt2"/>
                         <outlet property="eatTheCarrot" destination="sgo-Nd-ci1" id="Tdc-pc-AB6"/>
+                        <outlet property="listenButton" destination="m4R-Oy-WhN" id="Zze-Cy-PKO"/>
+                        <outlet property="rotatingCarrot" destination="gPI-Hh-3qL" id="gGT-Af-tFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -51,5 +56,6 @@
     </scenes>
     <resources>
         <image name="carrot-1" width="300" height="300"/>
+        <image name="carrot-2" width="300" height="300"/>
     </resources>
 </document>

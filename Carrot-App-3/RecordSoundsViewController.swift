@@ -11,17 +11,40 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
+    @IBOutlet weak var rotatingCarrot: UIImageView!
     @IBOutlet weak var eatTheCarrot: UILabel!
     @IBOutlet weak var dontEatTheCarrot: UILabel!
+
+    @IBOutlet weak var listenButton: UIButton!
     
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
     var roomAverage: Float = 0.0
+    let rotate = [
+        UIImage(named: "carrot-2")!,
+        UIImage(named: "carrot-3")!,
+        UIImage(named: "carrot-4")!,
+        UIImage(named: "carrot-5")!,
+        UIImage(named: "carrot-6")!,
+        UIImage(named: "carrot-7")!,
+        UIImage(named: "carrot-8")!,
+        UIImage(named: "carrot-9")!,
+        UIImage(named: "carrot-10")!,
+        UIImage(named: "carrot-11")!,
+        UIImage(named: "carrot-12")!,
+        UIImage(named: "carrot-13")!,
+        UIImage(named: "carrot-14")!,
+        UIImage(named: "carrot-15")!,
+        UIImage(named: "carrot-16")!
+    ]
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         eatTheCarrot.hidden = true
         dontEatTheCarrot.hidden = true
+        rotatingCarrot.hidden = true
+        rotatingCarrot.image = rotate[index++]
     }
     
     @IBAction func recordButtonTapped() {
@@ -52,6 +75,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 //        audioRecorder.prepareToRecord()
 //        audioRecorder.record()
 //        print("RECORDING")
+        
+        
+        
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         
         if(audioSession.respondsToSelector("requestRecordPermission:")){
@@ -79,7 +105,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     try! self.audioRecorder = AVAudioRecorder(URL: url!, settings: settings)
                     self.audioRecorder.meteringEnabled = true
                     self.audioRecorder.recordForDuration(3)
-                    sleep(4)
+//                    sleep(4)
+                    self.hideButton()
+                    self.animateRotation()
+                    
                     self.audioRecorder.updateMeters()
                     
                     self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
@@ -94,7 +123,31 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                 }else{print("booo")}
             })
         }
-        
+    }
+    
+    func hideButton(){
+        let timer:Double = 0.25
+        NSThread.sleepForTimeInterval(timer)
+        listenButton.hidden = true
+        rotatingCarrot.hidden = false
+    }
+    
+    func animateRotation(){
+        CATransaction.begin()
+        let animationDuration: NSTimeInterval = 0.25
+        let switchingInterval: NSTimeInterval = 4
+    
+        CATransaction.setAnimationDuration(animationDuration)
+        CATransaction.setCompletionBlock {
+            let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(switchingInterval * NSTimeInterval(NSEC_PER_SEC)))
+            dispatch_after(delay, dispatch_get_main_queue()) {
+                self.animateRotation()
+            }
+        }
+        let transition = CATransition()
+        transition.type = kCATransitionFade
+        rotatingCarrot.layer.addAnimation(transition, forKey: kCATransition)
+        rotatingCarrot.image = rotate[index]
     }
     
     func flowTest()  {
@@ -108,7 +161,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    
 //    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
 //        if flag {
 //            //Save the recorded audio
@@ -120,15 +172,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 //        }
 //    }
 
-    
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-
 }
 
