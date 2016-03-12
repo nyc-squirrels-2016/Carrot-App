@@ -40,6 +40,12 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         print(audioRecorder.peakPowerForChannel(0)) //Adding in for testing. To not remain (at least for now) in this function.
         print("RECORDING BITCHESSSSSSSS FUCK")
         
+        //Problems to address:
+        //Cannot add @IBAction to playsoundsviewcontroller. Could make a one page layout again, but would rather not.
+        //We do not know that we are actually ever recording anything. It's an assumption, although the truthiness of print(audioRecorder.recordForDuration(5))
+        //We definitively do not have the correct channel for recording. -160.0 is silence; we are recording silence.
+        
+        
         
     }
 
