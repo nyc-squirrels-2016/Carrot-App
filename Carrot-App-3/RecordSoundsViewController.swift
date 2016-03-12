@@ -48,36 +48,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func recordButtonTapped() {
-//        print("Start Recording")
-//        
-//        // Where do I want to save the recording... Assume this is like working with DIR in ruby
-//        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-//        let filePath = NSURL.fileURLWithPath(dirPath)
-//        
-//        let session = AVAudioSession.sharedInstance()
-//
-////        let recordSettings:[String : AnyObject] = [
-////            AVFormatIDKey: NSNumber(unsignedInt:kAudioFormatAppleLossless),
-////            AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue,
-////            AVEncoderBitRateKey : 320000,
-////            AVNumberOfChannelsKey: 2,
-////            AVSampleRateKey : 44100.0
-////        ]
-////        //        print(filePath)
-////        print(recordSettings)
-//
-//        
-//        try! session.setCategory(AVAudioSessionCategoryRecord)
-//        try! audioRecorder = AVAudioRecorder(URL: filePath, settings: [:])
-//        
-//        audioRecorder.delegate = self
-//        audioRecorder.meteringEnabled = true
-//        audioRecorder.prepareToRecord()
-//        audioRecorder.record()
-//        print("RECORDING")
-        
-        
-        
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         
         if(audioSession.respondsToSelector("requestRecordPermission:")){
@@ -161,17 +131,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-//    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-//        if flag {
-//            //Save the recorded audio
-//            recordedAudio = RecordedAudio(filePathURL: recorder.url, title: recorder.url.lastPathComponent!)
-//            //Perform a segue to next scene
-//            print("Okie Dokie")
-//        } else {
-//            print("Recording was not successful")
-//        }
-//    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
