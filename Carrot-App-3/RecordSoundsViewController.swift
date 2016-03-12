@@ -48,7 +48,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         
         if(audioSession.respondsToSelector("requestRecordPermission:")){
             AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool) -> Void in
-                if granted { print("granted")
+                if granted {
                     try! audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
                     try! audioSession.setActive(true)
                     let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
@@ -69,19 +69,18 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     
                     //record
                     try! self.audioRecorder = AVAudioRecorder(URL: url!, settings: settings)
-                    self.audioRecorder.prepareToRecord()
                     self.audioRecorder.meteringEnabled = true
-                    self.audioRecorder.record()
-
+                    self.audioRecorder.recordForDuration(3)
+                    sleep(4)
+                    self.audioRecorder.updateMeters()
+                    
+                    print(self.audioRecorder.averagePowerForChannel(0))
                     
                     // prepareToRecord
                     // setMeteringEnabled
                     // record
                     // updateMeters
                     // peak or avg power
-
-                    print(url)
-                    
                     
                 }else{print("booo")}
             })
@@ -100,16 +99,16 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
 
-    @IBAction func stopRecording() {
-        self.audioRecorder.updateMeters()
-        audioRecorder.stop()
-
-        print(self.audioRecorder.peakPowerForChannel(0))
-
-        let audioSession = AVAudioSession.sharedInstance()
-        try! audioSession.setActive(false)
-        print("Stopping recording")
-    }
+//    @IBAction func stopRecording() {
+//        self.audioRecorder.updateMeters()
+//        audioRecorder.stop()
+//
+//        print(self.audioRecorder.averagePowerForChannel(0))
+//
+//        let audioSession = AVAudioSession.sharedInstance()
+//        try! audioSession.setActive(false)
+//        print("Stopping recording")
+//    }
     
 
 

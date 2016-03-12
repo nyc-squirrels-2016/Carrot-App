@@ -17,34 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4R-Oy-WhN">
-                                <rect key="frame" x="58" y="209" width="204" height="150"/>
-                                <state key="normal" title="Button" image="Carrot"/>
-                                <connections>
-                                    <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="SiQ-e3-QCe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTi-kJ-PgZ">
-                                <rect key="frame" x="58" y="389" width="106" height="30"/>
-                                <state key="normal" title="Stop Recording"/>
+                                <rect key="frame" x="84" y="391" width="129" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stop Recording">
+                                    <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="stopRecording" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCf-F0-W6v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-rB-2l8">
-                                <rect key="frame" x="129" y="65" width="62" height="30"/>
-                                <state key="normal" title="Playback"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4R-Oy-WhN">
+                                <rect key="frame" x="58" y="182" width="204" height="204"/>
+                                <state key="normal" image="carrot-1"/>
+                                <connections>
+                                    <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="SiQ-e3-QCe"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.86666666666666" y="441.14666666666665"/>
+            <point key="canvasLocation" x="101" y="441"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Carrot" width="150" height="150"/>
+        <image name="carrot-1" width="300" height="300"/>
     </resources>
 </document>
