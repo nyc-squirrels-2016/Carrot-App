@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-rB-2l8">
-                                <rect key="frame" x="73" y="102" width="62" height="30"/>
+                                <rect key="frame" x="129" y="65" width="62" height="30"/>
                                 <state key="normal" title="Playback"/>
                             </button>
                         </subviews>

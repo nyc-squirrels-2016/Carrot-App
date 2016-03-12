@@ -11,49 +11,101 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
+    
     var audioRecorder:AVAudioRecorder!
-    var receivedAudio: RecordedAudio!
+    var recordedAudio: RecordedAudio!
 
 
     @IBAction func recordButtonTapped() {
-        print("Start Recording")
+//        print("Start Recording")
+//        
+//        // Where do I want to save the recording... Assume this is like working with DIR in ruby
+//        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+//        let filePath = NSURL.fileURLWithPath(dirPath)
+//        
+//        let session = AVAudioSession.sharedInstance()
+//
+////        let recordSettings:[String : AnyObject] = [
+////            AVFormatIDKey: NSNumber(unsignedInt:kAudioFormatAppleLossless),
+////            AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue,
+////            AVEncoderBitRateKey : 320000,
+////            AVNumberOfChannelsKey: 2,
+////            AVSampleRateKey : 44100.0
+////        ]
+////        //        print(filePath)
+////        print(recordSettings)
+//
+//        
+//        try! session.setCategory(AVAudioSessionCategoryRecord)
+//        try! audioRecorder = AVAudioRecorder(URL: filePath, settings: [:])
+//        
+//        audioRecorder.delegate = self
+//        audioRecorder.meteringEnabled = true
+//        audioRecorder.prepareToRecord()
+//        audioRecorder.record()
+//        print("RECORDING")
+        let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         
-        // Where do I want to save the recording... Assume this is like working with DIR in ruby
-        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        let recordingName = "fudge.wav"
-        let pathArray = [dirPath, recordingName]
+        if(audioSession.respondsToSelector("requestRecordPermission:")){
+            AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool) -> Void in
+                if granted { print("granted")
+                    try! audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+                    try! audioSession.setActive(true)
+                    let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+                    let fileName = "my_audio.caf"
+                    let pathArray = [documentsDirectory, fileName]
+                    let url = NSURL.fileURLWithPathComponents(pathArray)
+                    
+                    //create AnyObject of settings
+                    let settings: [String : AnyObject] = [
+                        
+                        AVFormatIDKey:Int(kAudioFormatAppleIMA4), //Int required in Swift2
+                        AVSampleRateKey:44100.0,
+                        AVNumberOfChannelsKey:1,
+                        AVEncoderBitRateKey:12800,
+                        AVLinearPCMBitDepthKey:16,
+                        AVEncoderAudioQualityKey:AVAudioQuality.Max.rawValue
+                    ]
+                    
+                    //record
+                    try! self.audioRecorder = AVAudioRecorder(URL: url!, settings: settings)
+                    self.audioRecorder.prepareToRecord()
+                    self.audioRecorder.meteringEnabled = true
+                    self.audioRecorder.record()
+
+                    
+                    // prepareToRecord
+                    // setMeteringEnabled
+                    // record
+                    // updateMeters
+                    // peak or avg power
+
+                    print(url)
+                    
+                    
+                }else{print("booo")}
+            })
+        }
         
-        let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        print(filePath)
-        
-        let session = AVAudioSession.sharedInstance()
-        
-        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
-        try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
-        audioRecorder.delegate = self
-        audioRecorder.meteringEnabled = true
-        audioRecorder.prepareToRecord()
-        print(audioRecorder.peakPowerForChannel(0)) //Adding in for testing. To not remain (at least for now) in this function.
-        print(audioRecorder.recordForDuration(5))
-        print(audioRecorder.peakPowerForChannel(0)) //Adding in for testing. To not remain (at least for now) in this function.
-        print(audioRecorder.stop()) //Adding in for testing. To not remain (at least for now) in this function.
-        print(audioRecorder.peakPowerForChannel(0)) //Adding in for testing. To not remain (at least for now) in this function.
-        print("RECORDING BITCHESSSSSSSS FUCK")
-        
-        //Problems to address:
-        //Cannot add @IBAction to playsoundsviewcontroller. Could make a one page layout again, but would rather not.
-        //We do not know that we are actually ever recording anything. It's an assumption, although the truthiness of print(audioRecorder.recordForDuration(5))
-        //We definitively do not have the correct channel for recording. -160.0 is silence; we are recording silence.
-        
-        
-        
+    }
+    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        if flag {
+            //Save the recorded audio
+            recordedAudio = RecordedAudio(filePathURL: recorder.url, title: recorder.url.lastPathComponent!)
+            //Perform a segue to next scene
+            print("Okie Dokie")
+        } else {
+            print("Recording was not successful")
+        }
     }
 
     @IBAction func stopRecording() {
+        self.audioRecorder.updateMeters()
         audioRecorder.stop()
-        
-        print(audioRecorder.peakPowerForChannel(0))
-        
+
+        print(self.audioRecorder.peakPowerForChannel(0))
+
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
         print("Stopping recording")
