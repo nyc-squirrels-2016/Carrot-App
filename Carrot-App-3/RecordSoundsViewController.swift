@@ -12,7 +12,6 @@ import QuartzCore
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
-    @IBOutlet weak var rotatingCarrot: UIImageView!
     @IBOutlet weak var eatTheCarrot: UILabel!
     @IBOutlet weak var dontEatTheCarrot: UILabel!
 
@@ -21,31 +20,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
     var roomAverage: Float = 0.0
-    let rotate = [
-        UIImage(named: "carrot-2")!,
-        UIImage(named: "carrot-3")!,
-        UIImage(named: "carrot-4")!,
-        UIImage(named: "carrot-5")!,
-        UIImage(named: "carrot-6")!,
-        UIImage(named: "carrot-7")!,
-        UIImage(named: "carrot-8")!,
-        UIImage(named: "carrot-9")!,
-        UIImage(named: "carrot-10")!,
-        UIImage(named: "carrot-11")!,
-        UIImage(named: "carrot-12")!,
-        UIImage(named: "carrot-13")!,
-        UIImage(named: "carrot-14")!,
-        UIImage(named: "carrot-15")!,
-        UIImage(named: "carrot-16")!
-    ]
-    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         eatTheCarrot.hidden = true
         dontEatTheCarrot.hidden = true
-        rotatingCarrot.hidden = true
-        rotatingCarrot.image = rotate[index++]
     }
     
     @IBAction func recordButtonTapped() {
@@ -102,35 +81,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             })
         }
     }
-    
-    func hideButton(){
-        let timer:Double = 0.25
-        NSThread.sleepForTimeInterval(timer)
-        listenButton.hidden = true
-        rotatingCarrot.hidden = false
-    }
-    
-    func animateRotation(){
-        CATransaction.begin()
-        let animationDuration: NSTimeInterval = 0.25
-        let switchingInterval: NSTimeInterval = 4
-    
-        CATransaction.setAnimationDuration(animationDuration)
-        CATransaction.setCompletionBlock {
-            let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(switchingInterval * NSTimeInterval(NSEC_PER_SEC)))
-            dispatch_after(delay, dispatch_get_main_queue()) {
-                self.animateRotation()
-            }
-        }
-        let transition = CATransition()
-        transition.type = kCATransitionFade
-        rotatingCarrot.layer.addAnimation(transition, forKey: kCATransition)
-        rotatingCarrot.image = rotate[index]
-    }
+
     
     func flowTest()  {
         print("Now in control flow")
-        if self.roomAverage > -20 {
+        if self.roomAverage > -30 {
             print("Eat")
             eatTheCarrot.hidden = false
         } else {
