@@ -99,6 +99,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         if self.roomAverage > -30 {
             print("Eat") //Delete Later
             eatTheCarrot.hidden = false //Delete Later
+            self.performSegueWithIdentifier("toTakeaBite", sender: self)
         } else {
             print("Don't") //Delete Later
             dontEatTheCarrot.hidden = false //Delete Later

@@ -44,11 +44,53 @@
                         <outlet property="eatTheCarrot" destination="sgo-Nd-ci1" id="Tdc-pc-AB6"/>
                         <outlet property="listenButton" destination="m4R-Oy-WhN" id="Zze-Cy-PKO"/>
                         <segue destination="JQw-Ah-F07" kind="show" identifier="toDontEat" id="vi4-Kr-Z1A"/>
+                        <segue destination="Lm6-My-5Re" kind="show" identifier="toTakeaBite" id="cx7-aq-ffv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="275" y="442"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5E3-aW-vac">
+            <objects>
+                <viewController id="Lm6-My-5Re" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z5f-bd-0bc"/>
+                        <viewControllerLayoutGuide type="bottom" id="QAH-R7-rpx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QBU-ma-Fdp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-dT-QMw">
+                                <rect key="frame" x="173" y="48" width="254" height="81"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Take a bite!">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="50" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It's loud enough," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKE-FX-Z60">
+                                <rect key="frame" x="237" y="34" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="carrot-5" translatesAutoresizingMaskIntoConstraints="NO" id="KB6-tj-2SA">
+                                <rect key="frame" x="150" y="137" width="300" height="300"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxw-Pr-TI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="147"/>
         </scene>
         <!--dontEat-->
         <scene sceneID="Py9-vj-71j">
