@@ -88,12 +88,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     // peak or avg power
                     
                 }else {
-                    print("booo")
+                    print("Recording Failed")
                 }
             })
         }
     }
-
     
     func flowTest()  {
         print("Now in control flow")
@@ -103,7 +102,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         } else {
             print("Don't")
             dontEatTheCarrot.hidden = false
-            performSegueWithIdentifier("toDontEat", sender: nil)
+            self.performSegueWithIdentifier("toDontEat", sender: self)
         }
     }
     

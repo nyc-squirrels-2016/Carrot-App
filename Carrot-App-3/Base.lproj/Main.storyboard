@@ -36,13 +36,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jor-o3-MaY">
-                                <rect key="frame" x="290" y="479" width="37" height="30"/>
-                                <state key="normal" title="Don't"/>
-                                <connections>
-                                    <segue destination="JQw-Ah-F07" kind="show" identifier="toDontEat" id="cKp-v3-Oo5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -50,6 +43,7 @@
                         <outlet property="dontEatTheCarrot" destination="KNl-p7-xlx" id="MBS-Ct-Dt2"/>
                         <outlet property="eatTheCarrot" destination="sgo-Nd-ci1" id="Tdc-pc-AB6"/>
                         <outlet property="listenButton" destination="m4R-Oy-WhN" id="Zze-Cy-PKO"/>
+                        <segue destination="JQw-Ah-F07" kind="show" identifier="toDontEat" id="vi4-Kr-Z1A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
