@@ -27,6 +27,15 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         dontEatTheCarrot.hidden = true
     }
     
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
     @IBAction func recordButtonTapped() {
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         
@@ -69,15 +78,18 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 
                     print(self.audioRecorder.averagePowerForChannel(0))
                     self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
-                    
-                    self.flowTest()
+                    self.delay(2.5) {
+                        self.flowTest()
+                    }
                     // prepareToRecord
                     // setMeteringEnabled
                     // record
                     // updateMeters
                     // peak or avg power
                     
-                }else{print("booo")}
+                }else {
+                    print("booo")
+                }
             })
         }
     }
@@ -91,6 +103,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         } else {
             print("Don't")
             dontEatTheCarrot.hidden = false
+            performSegueWithIdentifier("toDontEat", sender: nil)
         }
     }
     
