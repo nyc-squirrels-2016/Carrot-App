@@ -72,10 +72,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 //                    self.animateRotation()
                     self.audioRecorder.meteringEnabled = true
                     self.audioRecorder.record()
-                    NSThread.sleepForTimeInterval(0.5)
+                    NSThread.sleepForTimeInterval(0.5) // Replace with delay and include all the functions between here and the second delay.
                     self.audioRecorder.updateMeters()
                     self.audioRecorder.stop()
-
                     print(self.audioRecorder.averagePowerForChannel(0))
                     self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
                     self.delay(2.5) {
@@ -89,6 +88,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     
                 }else {
                     print("Recording Failed")
+                    // Add error handling or at the very least error messaging
                 }
             })
         }
@@ -97,11 +97,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     func flowTest()  {
         print("Now in control flow")
         if self.roomAverage > -30 {
-            print("Eat")
-            eatTheCarrot.hidden = false
+            print("Eat") //Delete Later
+            eatTheCarrot.hidden = false //Delete Later
         } else {
-            print("Don't")
-            dontEatTheCarrot.hidden = false
+            print("Don't") //Delete Later
+            dontEatTheCarrot.hidden = false //Delete Later
             self.performSegueWithIdentifier("toDontEat", sender: self)
         }
     }
