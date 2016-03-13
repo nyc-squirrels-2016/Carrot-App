@@ -11,9 +11,6 @@ import AVFoundation
 import QuartzCore
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
-    
-    @IBOutlet weak var eatTheCarrot: UILabel!
-    @IBOutlet weak var dontEatTheCarrot: UILabel!
 
     @IBOutlet weak var listenButton: UIButton!
     
@@ -23,8 +20,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        eatTheCarrot.hidden = true
-        dontEatTheCarrot.hidden = true
     }
     
     func delay(delay:Double, closure:()->()) {
@@ -98,11 +93,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         print("Now in control flow")
         if self.roomAverage > -30 {
             print("Eat") //Delete Later
-            eatTheCarrot.hidden = false //Delete Later
             self.performSegueWithIdentifier("toTakeaBite", sender: self)
         } else {
             print("Don't") //Delete Later
-            dontEatTheCarrot.hidden = false //Delete Later
             self.performSegueWithIdentifier("toDontEat", sender: self)
         }
     }

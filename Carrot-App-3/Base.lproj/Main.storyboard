@@ -24,24 +24,10 @@
                                     <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="SiQ-e3-QCe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgo-Nd-ci1">
-                                <rect key="frame" x="157" y="89" width="26" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNl-p7-xlx">
-                                <rect key="frame" x="112" y="483" width="41" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="dontEatTheCarrot" destination="KNl-p7-xlx" id="MBS-Ct-Dt2"/>
-                        <outlet property="eatTheCarrot" destination="sgo-Nd-ci1" id="Tdc-pc-AB6"/>
                         <outlet property="listenButton" destination="m4R-Oy-WhN" id="Zze-Cy-PKO"/>
                         <segue destination="JQw-Ah-F07" kind="show" identifier="toDontEat" id="vi4-Kr-Z1A"/>
                         <segue destination="Lm6-My-5Re" kind="show" identifier="toTakeaBite" id="cx7-aq-ffv"/>
@@ -82,7 +68,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="carrot-5" translatesAutoresizingMaskIntoConstraints="NO" id="KB6-tj-2SA">
-                                <rect key="frame" x="150" y="137" width="300" height="300"/>
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
