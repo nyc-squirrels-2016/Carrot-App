@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import QuartzCore
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
@@ -73,14 +74,21 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     
                     //record
                     try! self.audioRecorder = AVAudioRecorder(URL: url!, settings: settings)
+                    UIView.animateWithDuration(2.0, animations:{ () -> Void in
+                        self.listenButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+                    })
+                    UIView.animateWithDuration(2.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations:{ () -> Void in
+                        self.listenButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2))
+                    }, completion: nil)
+//                    self.hideButton()
+//                    self.animateRotation()
                     self.audioRecorder.meteringEnabled = true
-                    self.audioRecorder.recordForDuration(3)
-//                    sleep(4)
-                    self.hideButton()
-                    self.animateRotation()
-                    
+                    self.audioRecorder.record()
+                    NSThread.sleepForTimeInterval(0.5)
                     self.audioRecorder.updateMeters()
-                    
+                    self.audioRecorder.stop()
+
+                    print(self.audioRecorder.averagePowerForChannel(0))
                     self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
                     
                     self.flowTest()
