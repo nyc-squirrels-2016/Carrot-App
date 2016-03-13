@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "carrot-7.png",
+      "filename" : "carrot-img.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "carrot-8.png",
+      "filename" : "carrot-img-1.png",
       "scale" : "2x"
     },
     {
