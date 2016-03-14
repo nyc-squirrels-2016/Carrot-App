@@ -73,8 +73,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     UIView.animateWithDuration(2.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations:{ () -> Void in
                         self.listenButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2))
                     }, completion: nil)
-//                    self.hideButton()
-//                    self.animateRotation()
                     self.audioRecorder.meteringEnabled = true
                     self.audioRecorder.record()
                     NSThread.sleepForTimeInterval(0.5) // Replace with delay and include all the functions between here and the second delay.
@@ -85,11 +83,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     self.delay(2.5) {
                         self.flowTest()
                     }
-                    // prepareToRecord
-                    // setMeteringEnabled
-                    // record
-                    // updateMeters
-                    // peak or avg power
                     
                 }else {
                     print("Recording Failed")
@@ -102,10 +95,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     func flowTest()  {
         print("Now in control flow")
         if self.roomAverage > -30 {
-            print("Eat") //Delete Later
             self.performSegueWithIdentifier("toTakeaBite", sender: self)
         } else {
-            print("Don't") //Delete Later
             self.performSegueWithIdentifier("toDontEat", sender: self)
         }
     }
