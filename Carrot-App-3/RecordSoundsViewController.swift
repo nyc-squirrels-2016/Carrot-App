@@ -24,6 +24,14 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         listeningLabel.hidden = true
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
