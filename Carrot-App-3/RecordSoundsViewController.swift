@@ -13,6 +13,7 @@ import QuartzCore
 class ViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBOutlet weak var listenButton: UIButton!
+    @IBOutlet weak var listeningLabel: UILabel!
     
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
@@ -20,6 +21,15 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listeningLabel.hidden = true
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
     
     func delay(delay:Double, closure:()->()) {
@@ -54,7 +64,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                         AVLinearPCMBitDepthKey:16,
                         AVEncoderAudioQualityKey:AVAudioQuality.Max.rawValue
                     ]
-                    
+                    self.listeningLabel.hidden = false
                     //record
                     try! self.audioRecorder = AVAudioRecorder(URL: url!, settings: settings)
                     UIView.animateWithDuration(2.0, animations:{ () -> Void in
