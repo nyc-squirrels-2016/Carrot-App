@@ -46,9 +46,6 @@
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="UBe-Q6-GRi" kind="modal" id="xHo-2K-gw3"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4R-Oy-WhN">
                                 <rect key="frame" x="10" y="134" width="300" height="300"/>
@@ -163,41 +160,6 @@
             </objects>
             <point key="canvasLocation" x="551" y="130"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="foD-wA-0qE">
-            <objects>
-                <viewController id="UBe-Q6-GRi" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h6t-Y7-myt"/>
-                        <viewControllerLayoutGuide type="bottom" id="YaY-tZ-dce"/>
-                    </layoutGuides>
-                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="foE-vT-sPb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="this is some info aboutroot vegetables" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-AE-a3j">
-                                <rect key="frame" x="15" y="157" width="291" height="254"/>
-                                <color key="backgroundColor" red="1" green="0.59977992740595454" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.36660779412026312" blue="0.73366477272727271" alpha="0.78000000000000003" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qz-OB-oSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="161" y="1146"/>
-        </scene>
         <!--toDontEat-->
         <scene sceneID="Py9-vj-71j">
             <objects>
@@ -284,7 +246,7 @@
         <image name="carrot-img" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="peO-OB-1za"/>
+        <segue reference="7cr-LL-nme"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
