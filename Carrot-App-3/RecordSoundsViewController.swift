@@ -11,9 +11,6 @@ import AVFoundation
 import QuartzCore
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
-    
-    @IBOutlet weak var eatTheCarrot: UILabel!
-    @IBOutlet weak var dontEatTheCarrot: UILabel!
 
     @IBOutlet weak var listenButton: UIButton!
     
@@ -23,8 +20,15 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        eatTheCarrot.hidden = true
-        dontEatTheCarrot.hidden = true
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
     
     @IBAction func recordButtonTapped() {
@@ -63,34 +67,36 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 //                    self.animateRotation()
                     self.audioRecorder.meteringEnabled = true
                     self.audioRecorder.record()
-                    NSThread.sleepForTimeInterval(0.5)
+                    NSThread.sleepForTimeInterval(0.5) // Replace with delay and include all the functions between here and the second delay.
                     self.audioRecorder.updateMeters()
                     self.audioRecorder.stop()
-
                     print(self.audioRecorder.averagePowerForChannel(0))
                     self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
-                    
-                    self.flowTest()
+                    self.delay(2.5) {
+                        self.flowTest()
+                    }
                     // prepareToRecord
                     // setMeteringEnabled
                     // record
                     // updateMeters
                     // peak or avg power
                     
-                }else{print("booo")}
+                }else {
+                    print("Recording Failed")
+                    // Add error handling or at the very least error messaging
+                }
             })
         }
     }
-
     
     func flowTest()  {
         print("Now in control flow")
         if self.roomAverage > -30 {
-            print("Eat")
-            eatTheCarrot.hidden = false
+            print("Eat") //Delete Later
+            self.performSegueWithIdentifier("toTakeaBite", sender: self)
         } else {
-            print("Don't")
-            dontEatTheCarrot.hidden = false
+            print("Don't") //Delete Later
+            self.performSegueWithIdentifier("toDontEat", sender: self)
         }
     }
     
