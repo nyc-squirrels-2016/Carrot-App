@@ -5,6 +5,151 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
+        <!--dontWhoopee-->
+        <scene sceneID="NZu-A8-lnv">
+            <objects>
+                <viewController title="dontWhoopee" id="pTl-dZ-BmK" customClass="NoAnimationViewController" customModule="Carrot_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1vT-rE-fyh"/>
+                        <viewControllerLayoutGuide type="bottom" id="5j0-Vm-qrT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wnU-sp-AWg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whoopee1" translatesAutoresizingMaskIntoConstraints="NO" id="x77-3f-dZc">
+                                <rect key="frame" x="23" y="146" width="275" height="275"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCl-PI-ghT">
+                                <rect key="frame" x="109" y="58" width="112" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="it's too quiet...">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWZ-Ls-c8U">
+                                <rect key="frame" x="22" y="58" width="286" height="81"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="better hold this one in!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="28" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEG-1B-aDf">
+                                <rect key="frame" x="120" y="432" width="80" height="37"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Home">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Futura-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="FBO-eU-NIO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEe-b7-IWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="938"/>
+        </scene>
+        <!--startWhoopee-->
+        <scene sceneID="Vkx-lf-mns">
+            <objects>
+                <viewController title="startWhoopee" id="Brg-3Q-SyH" customClass="StartWhoopeeViewController" customModule="Carrot_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qfh-9F-QZP"/>
+                        <viewControllerLayoutGuide type="bottom" id="10N-j7-VQR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CoL-JN-sIy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whoopee1" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-tR-9D2">
+                                <rect key="frame" x="23" y="146" width="275" height="275"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiK-ag-waY">
+                                <rect key="frame" x="69" y="58" width="182" height="81"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="let it rip!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="50" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="it's loud enough..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWr-M1-sPT">
+                                <rect key="frame" x="91" y="58" width="138" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Je3-fZ-W54">
+                                <rect key="frame" x="120" y="432" width="80" height="37"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Home">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Futura-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="wNQ-4X-mRA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whoopee2" translatesAutoresizingMaskIntoConstraints="NO" id="5tH-Ee-GeX">
+                                <rect key="frame" x="23" y="146" width="275" height="275"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="startingWhoopee" destination="5tH-Ee-GeX" id="70O-du-639"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVf-6H-buL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="1119"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,10 +165,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ll-3D-hKD">
                                 <rect key="frame" x="88" y="432" width="145" height="47"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Listening...">
+                                    <fragment content="listening...">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="30" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -32,10 +178,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK6-ru-2PR">
                                 <rect key="frame" x="16" y="74" width="289" height="42"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Press the carrot">
+                                    <fragment content="press the carrot">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="40" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -86,8 +233,10 @@
                         <outlet property="listeningLabel" destination="4Ll-3D-hKD" id="yjV-1z-QrO"/>
                         <segue destination="JQw-Ah-F07" kind="modal" identifier="toDontEat" id="vi4-Kr-Z1A"/>
                         <segue destination="Lm6-My-5Re" kind="modal" identifier="toTakeaBite" id="cx7-aq-ffv"/>
-                        <segue destination="kLH-Le-jLa" kind="modal" id="IoS-29-lyW"/>
-                        <segue destination="zHF-vo-Xml" kind="modal" id="vGq-MS-MAG"/>
+                        <segue destination="kLH-Le-jLa" kind="modal" identifier="toPlayBoomBox" id="IoS-29-lyW"/>
+                        <segue destination="zHF-vo-Xml" kind="modal" identifier="toDontPlayBoomBox" id="vGq-MS-MAG"/>
+                        <segue destination="pTl-dZ-BmK" kind="modal" identifier="toDontWhoopee" id="duR-pC-Vbb"/>
+                        <segue destination="Brg-3Q-SyH" kind="modal" id="wjv-rf-A7n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +246,7 @@
         <!--dontPlayBoomBox-->
         <scene sceneID="JaS-0y-34J">
             <objects>
-                <viewController title="dontPlayBoomBox" id="zHF-vo-Xml" sceneMemberID="viewController">
+                <viewController title="dontPlayBoomBox" id="zHF-vo-Xml" customClass="NoAnimationViewController" customModule="Carrot_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X6H-l2-F3r"/>
                         <viewControllerLayoutGuide type="bottom" id="V9d-fL-hd3"/>
@@ -107,24 +256,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boombox1" translatesAutoresizingMaskIntoConstraints="NO" id="xtn-7B-Tsi">
-                                <rect key="frame" x="23" y="161" width="275" height="275"/>
+                                <rect key="frame" x="23" y="147" width="275" height="275"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyD-fH-ZyK">
-                                <rect key="frame" x="110" y="58" width="100" height="21"/>
+                                <rect key="frame" x="110" y="58" width="112" height="21"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="It's too quiet,">
+                                    <fragment content="it's too quiet...">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-QW-QBn">
-                                <rect key="frame" x="74" y="58" width="173" height="81"/>
+                                <rect key="frame" x="37" y="58" width="248" height="81"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Turn it Down!">
+                                    <fragment content="turn down 4 watts!">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="28" name="Futura-Medium"/>
@@ -154,6 +304,9 @@
                                         <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="ZSz-dh-9DB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8f-1K-OgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="-298"/>
+            <point key="canvasLocation" x="-184" y="-363"/>
         </scene>
         <!--playBoomBox-->
         <scene sceneID="UJf-e0-rIY">
@@ -176,15 +329,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boombox1" translatesAutoresizingMaskIntoConstraints="NO" id="q4n-As-GFB">
-                                <rect key="frame" x="23" y="161" width="275" height="275"/>
+                                <rect key="frame" x="23" y="147" width="275" height="275"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boombox2" translatesAutoresizingMaskIntoConstraints="NO" id="VFp-uw-EVX">
-                                <rect key="frame" x="23" y="161" width="275" height="275"/>
+                                <rect key="frame" x="23" y="147" width="275" height="275"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7St-Cn-qFD">
-                                <rect key="frame" x="27" y="65" width="267" height="81"/>
+                                <rect key="frame" x="34" y="65" width="267" height="81"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Crank it Up!">
+                                    <fragment content="crank it up!">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="50" name="HelveticaNeue"/>
@@ -194,8 +347,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It's loud enough," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfQ-tA-nod">
-                                <rect key="frame" x="93" y="58" width="134" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="it's loud enough..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfQ-tA-nod">
+                                <rect key="frame" x="91" y="58" width="138" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -233,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGw-uK-41J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="-298"/>
+            <point key="canvasLocation" x="179" y="-363"/>
         </scene>
         <!--takeBite-->
         <scene sceneID="5E3-aW-vac">
@@ -247,8 +400,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It's loud enough," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKE-FX-Z60">
-                                <rect key="frame" x="93" y="58" width="134" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="it's loud enough..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKE-FX-Z60">
+                                <rect key="frame" x="91" y="58" width="138" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -301,10 +454,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-dT-QMw">
                                 <rect key="frame" x="33" y="65" width="254" height="81"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Take a bite!">
+                                    <fragment content="take a bite!">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="50" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -340,12 +494,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkS-In-yea">
-                                <rect key="frame" x="110" y="70" width="100" height="21"/>
+                                <rect key="frame" x="104" y="70" width="114" height="21"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="It's too quiet,">
+                                    <fragment content="it's too quiet...">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -354,7 +509,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-lD-I38">
                                 <rect key="frame" x="13" y="70" width="295" height="81"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Better wait this one out">
+                                    <fragment content="better wait this one out">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="28" name="Futura-Medium"/>
@@ -394,13 +549,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fIg-Gy-Ltm"/>
                     <connections>
                         <outlet property="dontEatCarrot" destination="rpI-7R-WZu" id="CS1-TL-EeO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQC-N3-EMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="776"/>
+            <point key="canvasLocation" x="551" y="774"/>
         </scene>
     </scenes>
     <resources>
@@ -415,9 +571,11 @@
         <image name="carrot-bite-6" width="300" height="300"/>
         <image name="carrot-img" width="300" height="300"/>
         <image name="whoopee0" width="200" height="181"/>
+        <image name="whoopee1" width="400" height="400"/>
+        <image name="whoopee2" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="epx-do-RBe"/>
+        <segue reference="wNQ-4X-mRA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

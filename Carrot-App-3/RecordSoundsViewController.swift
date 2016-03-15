@@ -138,11 +138,24 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     func flowTest()  {
-        print("Now in control flow")
-        if CGFloat(self.roomAverage) > CGFloat(self.objectAverage) {
-            self.performSegueWithIdentifier("toTakeaBite", sender: self)
-        } else {
-            self.performSegueWithIdentifier("toDontEat", sender: self)
+        if self.object == "carrot" {
+            if CGFloat(self.roomAverage) > CGFloat(self.objectAverage) {
+                self.performSegueWithIdentifier("toTakeaBite", sender: self)
+            } else {
+                self.performSegueWithIdentifier("toDontEat", sender: self)
+            }
+        } else if self.object == "boombox" {
+            if CGFloat(self.roomAverage) > CGFloat(self.objectAverage) {
+                self.performSegueWithIdentifier("toPlayBoomBox", sender: self)
+            } else {
+                self.performSegueWithIdentifier("toDontPlayBoomBox", sender: self)
+            }
+        } else if self.object == "whoopee" {
+            if CGFloat(self.roomAverage) > CGFloat(self.objectAverage){
+                self.performSegueWithIdentifier("toStartWhoopee", sender: self)
+            } else {
+                self.performSegueWithIdentifier("toDontWhoopee", sender: self)
+            }
         }
     }
     
