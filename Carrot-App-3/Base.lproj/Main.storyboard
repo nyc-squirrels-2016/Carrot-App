@@ -86,6 +86,7 @@
                         <outlet property="listeningLabel" destination="4Ll-3D-hKD" id="yjV-1z-QrO"/>
                         <segue destination="JQw-Ah-F07" kind="modal" identifier="toDontEat" id="vi4-Kr-Z1A"/>
                         <segue destination="Lm6-My-5Re" kind="modal" identifier="toTakeaBite" id="cx7-aq-ffv"/>
+                        <segue destination="kLH-Le-jLa" kind="modal" id="IoS-29-lyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,7 +96,7 @@
         <!--playBoomBox-->
         <scene sceneID="UJf-e0-rIY">
             <objects>
-                <viewController title="playBoomBox" id="kLH-Le-jLa" sceneMemberID="viewController">
+                <viewController title="playBoomBox" id="kLH-Le-jLa" customClass="PlayBoomBoxViewController" customModule="Carrot_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bt8-fa-Mee"/>
                         <viewControllerLayoutGuide type="bottom" id="8IM-gk-tIQ"/>
@@ -103,12 +104,66 @@
                     <view key="view" contentMode="scaleToFill" id="1S6-ym-1ej">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boombox1" translatesAutoresizingMaskIntoConstraints="NO" id="q4n-As-GFB">
+                                <rect key="frame" x="23" y="161" width="275" height="275"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boombox2" translatesAutoresizingMaskIntoConstraints="NO" id="VFp-uw-EVX">
+                                <rect key="frame" x="23" y="161" width="275" height="275"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7St-Cn-qFD">
+                                <rect key="frame" x="27" y="65" width="267" height="81"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Crank it Up!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="50" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It's loud enough," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfQ-tA-nod">
+                                <rect key="frame" x="93" y="58" width="134" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaF-b7-9y2">
+                                <rect key="frame" x="128" y="432" width="80" height="37"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Home">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Futura-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="epx-do-RBe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="playingBoomBox" destination="VFp-uw-EVX" id="U0B-ck-HXE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGw-uK-41J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="-195"/>
+            <point key="canvasLocation" x="106" y="-261"/>
         </scene>
         <!--takeBite-->
         <scene sceneID="5E3-aW-vac">
@@ -122,18 +177,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-dT-QMw">
-                                <rect key="frame" x="33" y="65" width="254" height="81"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Take a bite!">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="50" name="HelveticaNeue"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It's loud enough," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKE-FX-Z60">
                                 <rect key="frame" x="93" y="58" width="134" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -185,6 +228,18 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="carrot-img" translatesAutoresizingMaskIntoConstraints="NO" id="FkF-bC-iUY">
                                 <rect key="frame" x="10" y="134" width="300" height="300"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-dT-QMw">
+                                <rect key="frame" x="33" y="65" width="254" height="81"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Take a bite!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="50" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -280,6 +335,8 @@
     </scenes>
     <resources>
         <image name="boombox0" width="400" height="250"/>
+        <image name="boombox1" width="400" height="400"/>
+        <image name="boombox2" width="400" height="400"/>
         <image name="carrot-bite-1" width="300" height="300"/>
         <image name="carrot-bite-2" width="300" height="300"/>
         <image name="carrot-bite-3" width="300" height="300"/>
@@ -290,7 +347,7 @@
         <image name="whoopee0" width="200" height="181"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="peO-OB-1za"/>
+        <segue reference="epx-do-RBe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

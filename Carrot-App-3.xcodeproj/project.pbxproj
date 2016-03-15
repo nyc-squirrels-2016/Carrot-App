@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090507961C9875CB001F6625 /* PlayBoomBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090507951C9875CB001F6625 /* PlayBoomBoxViewController.swift */; };
 		0988A3D41C973CC9000593EC /* DontEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0988A3D31C973CC9000593EC /* DontEatViewController.swift */; };
 		0988A3D61C974C36000593EC /* TakeBiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0988A3D51C974C36000593EC /* TakeBiteViewController.swift */; };
 		09CE598C1C938843004C7EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE598B1C938843004C7EF2 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090507951C9875CB001F6625 /* PlayBoomBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBoomBoxViewController.swift; sourceTree = "<group>"; };
 		0988A3D31C973CC9000593EC /* DontEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DontEatViewController.swift; sourceTree = "<group>"; };
 		0988A3D51C974C36000593EC /* TakeBiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeBiteViewController.swift; sourceTree = "<group>"; };
 		09CE59881C938843004C7EF2 /* Carrot-App-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrot-App-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				09CE59971C938843004C7EF2 /* Info.plist */,
 				0988A3D31C973CC9000593EC /* DontEatViewController.swift */,
 				0988A3D51C974C36000593EC /* TakeBiteViewController.swift */,
+				090507951C9875CB001F6625 /* PlayBoomBoxViewController.swift */,
 			);
 			path = "Carrot-App-3";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				09CE59AC1C939B2F004C7EF2 /* RecordedAudio.swift in Sources */,
 				09CE598E1C938843004C7EF2 /* RecordSoundsViewController.swift in Sources */,
 				09CE598C1C938843004C7EF2 /* AppDelegate.swift in Sources */,
+				090507961C9875CB001F6625 /* PlayBoomBoxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

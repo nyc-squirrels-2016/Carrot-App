@@ -22,6 +22,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var recordedAudio: RecordedAudio!
     var roomAverage: Float = 0.0
     var objectAverage: Int = -30
+    var object = "carrot"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         self.objectAverage = -30
         let carrot = UIImage(named: "carrot-img.png")
         self.listenButton.setImage(carrot, forState: .Normal)
+        self.object = "carrot"
     }
     
     
@@ -56,6 +58,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         self.objectAverage = -1
         let boomBox = UIImage(named: "boombox1.png")
         self.listenButton.setImage(boomBox, forState: .Normal)
+        self.object = "boombox"
     }
     
     
@@ -63,6 +66,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         self.objectAverage = -40
         let whoopee = UIImage(named: "whoopee1.png")
         self.listenButton.setImage(whoopee, forState: .Normal)
+        self.object = "whoopee"
     }
     
 //    @IBAction func pickWhoopee() {
