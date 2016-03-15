@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="73" y="418"/>
         </scene>
-        <!--View Controller-->
+        <!--dontPlayBoomBox-->
         <scene sceneID="JaS-0y-34J">
             <objects>
-                <viewController id="zHF-vo-Xml" sceneMemberID="viewController">
+                <viewController title="dontPlayBoomBox" id="zHF-vo-Xml" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X6H-l2-F3r"/>
                         <viewControllerLayoutGuide type="bottom" id="V9d-fL-hd3"/>
