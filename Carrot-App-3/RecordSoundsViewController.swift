@@ -137,14 +137,15 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     NSThread.sleepForTimeInterval(0.5) // Replace with delay and include all the functions between here and the second delay.
                     self.audioRecorder.updateMeters()
                     self.audioRecorder.stop()
-                    print(self.audioRecorder.averagePowerForChannel(0))
+                    self.audioRecorder.averagePowerForChannel(0)
+                    //print(self.audioRecorder.averagePowerForChannel(0)
                     self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
                     self.delay(2.5) {
                         self.flowTest()
                     }
                     
                 }else {
-                    print("Recording Failed")
+                    //print("Recording Failed")
                     // Add error handling or at the very least error messaging
                 }
             })

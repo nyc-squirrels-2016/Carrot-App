@@ -526,10 +526,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info-popup" translatesAutoresizingMaskIntoConstraints="NO" id="guE-5s-iXM">
-                                <rect key="frame" x="23" y="146" width="275" height="275"/>
+                                <rect key="frame" x="10" y="134" width="300" height="300"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHJ-wG-e9a">
-                                <rect key="frame" x="258" y="146" width="40" height="40"/>
+                                <rect key="frame" x="270" y="134" width="40" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" red="1" green="0.59977992739999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
