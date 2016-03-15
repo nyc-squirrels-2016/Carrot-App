@@ -18,6 +18,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
     var roomAverage: Float = 0.0
+    var objectAverage: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,36 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             ),
             dispatch_get_main_queue(), closure)
     }
+    
+    @IBAction func pickCarrot() {
+        self.objectAverage = -30
+        let carrot = UIImage(named: "carrot-img.png")
+        self.listenButton.setImage(carrot, forState: .Normal)
+    }
+    
+    
+    @IBAction func pickBoomBox() {
+        self.objectAverage = -1
+        let boomBox = UIImage(named: "boombox.png")
+        self.listenButton.setImage(boomBox, forState: .Normal)
+    }
+    
+    
+    @IBAction func pickWhoopee() {
+        self.objectAverage = -40
+        let whoopee = UIImage(named: "whoopee1.png")
+        self.listenButton.setImage(whoopee, forState: .Normal)
+    }
+    
+//    @IBAction func pickWhoopee() {
+//        self.objectAverage = -40
+//        let whoopee = UIImage(named: "whoopee0.png")
+//        self.listenButton.setImage(whoopee, forState: .Normal)
+//    }
+    
+    
+    
+    
     
     @IBAction func recordButtonTapped() {
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
@@ -92,9 +123,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
+    
+    
     func flowTest()  {
         print("Now in control flow")
-        if self.roomAverage > -30 {
+        if CGFloat(self.roomAverage) > CGFloat(self.objectAverage) {
             self.performSegueWithIdentifier("toTakeaBite", sender: self)
         } else {
             self.performSegueWithIdentifier("toDontEat", sender: self)
