@@ -48,15 +48,8 @@
                                     <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="SiQ-e3-QCe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxB-e5-YdR">
-                                <rect key="frame" x="113" y="479" width="95" height="67"/>
-                                <state key="normal" image="boombox"/>
-                                <connections>
-                                    <action selector="pickBoomBox" destination="BYZ-38-t0r" eventType="touchUpInside" id="OnB-er-rCy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-W9-NJD">
-                                <rect key="frame" x="58" y="485" width="56" height="56"/>
+                                <rect key="frame" x="46" y="485" width="56" height="56"/>
                                 <state key="normal" image="carrot-img"/>
                                 <connections>
                                     <action selector="pickCarrot" destination="BYZ-38-t0r" eventType="touchUpInside" id="Usn-zJ-AaV"/>
@@ -69,10 +62,17 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPV-lR-0iS">
-                                <rect key="frame" x="185" y="465" width="95" height="95"/>
-                                <state key="normal" image="whoopee1"/>
+                                <rect key="frame" x="218" y="485" width="56" height="56"/>
+                                <state key="normal" image="whoopee0"/>
                                 <connections>
                                     <action selector="pickWhoopee" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zd-Sc-bBf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxB-e5-YdR">
+                                <rect key="frame" x="120" y="493" width="80" height="40"/>
+                                <state key="normal" image="boombox0"/>
+                                <connections>
+                                    <action selector="pickBoomBox" destination="BYZ-38-t0r" eventType="touchUpInside" id="OnB-er-rCy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -258,7 +258,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="boombox" width="400" height="250"/>
+        <image name="boombox0" width="420" height="200"/>
         <image name="carrot-bite-1" width="300" height="300"/>
         <image name="carrot-bite-2" width="300" height="300"/>
         <image name="carrot-bite-3" width="300" height="300"/>
@@ -266,10 +266,10 @@
         <image name="carrot-bite-5" width="300" height="300"/>
         <image name="carrot-bite-6" width="300" height="300"/>
         <image name="carrot-img" width="300" height="300"/>
-        <image name="whoopee1" width="400" height="400"/>
+        <image name="whoopee0" width="200" height="181"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7cr-LL-nme"/>
+        <segue reference="peO-OB-1za"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

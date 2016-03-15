@@ -18,7 +18,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
     var roomAverage: Float = 0.0
-    var objectAverage: Int = 0
+    var objectAverage: Int = -30
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func pickBoomBox() {
         self.objectAverage = -1
-        let boomBox = UIImage(named: "boombox.png")
+        let boomBox = UIImage(named: "boombox1.png")
         self.listenButton.setImage(boomBox, forState: .Normal)
     }
     
