@@ -79,6 +79,9 @@
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="chooseBoomBox" destination="SxB-e5-YdR" id="jYx-sf-ItX"/>
+                        <outlet property="chooseCarrot" destination="zCO-W9-NJD" id="fvW-Gw-00B"/>
+                        <outlet property="chooseWhoopee" destination="iPV-lR-0iS" id="fc4-Jl-X5m"/>
                         <outlet property="listenButton" destination="m4R-Oy-WhN" id="Zze-Cy-PKO"/>
                         <outlet property="listeningLabel" destination="4Ll-3D-hKD" id="yjV-1z-QrO"/>
                         <segue destination="JQw-Ah-F07" kind="modal" identifier="toDontEat" id="vi4-Kr-Z1A"/>
@@ -88,6 +91,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73" y="418"/>
+        </scene>
+        <!--playBoomBox-->
+        <scene sceneID="UJf-e0-rIY">
+            <objects>
+                <viewController title="playBoomBox" id="kLH-Le-jLa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bt8-fa-Mee"/>
+                        <viewControllerLayoutGuide type="bottom" id="8IM-gk-tIQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1S6-ym-1ej">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGw-uK-41J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="-195"/>
         </scene>
         <!--takeBite-->
         <scene sceneID="5E3-aW-vac">

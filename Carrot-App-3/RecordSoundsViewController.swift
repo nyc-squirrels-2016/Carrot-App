@@ -14,6 +14,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBOutlet weak var listenButton: UIButton!
     @IBOutlet weak var listeningLabel: UILabel!
+    @IBOutlet weak var chooseCarrot: UIButton!
+    @IBOutlet weak var chooseBoomBox: UIButton!
+    @IBOutlet weak var chooseWhoopee: UIButton!
     
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
@@ -73,6 +76,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     @IBAction func recordButtonTapped() {
+        
+        chooseCarrot.hidden = true
+        chooseBoomBox.hidden = true
+        chooseWhoopee.hidden = true
+        
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         
         if(audioSession.respondsToSelector("requestRecordPermission:")){
