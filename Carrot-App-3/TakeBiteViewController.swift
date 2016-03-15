@@ -9,8 +9,6 @@
 import UIKit
 
 class TakeBiteViewController: UIViewController {
-
-
     
     @IBOutlet weak var carrot0: UIImageView!
     @IBOutlet weak var carrot1: UIImageView!
