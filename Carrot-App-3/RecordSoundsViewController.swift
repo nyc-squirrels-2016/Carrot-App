@@ -17,6 +17,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var chooseCarrot: UIButton!
     @IBOutlet weak var chooseBoomBox: UIButton!
     @IBOutlet weak var chooseWhoopee: UIButton!
+    @IBOutlet weak var carrotLabel: UILabel!
+    @IBOutlet weak var boomBoxLabel: UILabel!
+    @IBOutlet weak var whoopeeLabel: UILabel!
+
     
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
@@ -27,6 +31,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         listeningLabel.hidden = true
+        boomBoxLabel.hidden = true
+        whoopeeLabel.hidden = true
     }
     
     override func shouldAutorotate() -> Bool {
@@ -51,6 +57,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         let carrot = UIImage(named: "carrot-img.png")
         self.listenButton.setImage(carrot, forState: .Normal)
         self.object = "carrot"
+        carrotLabel.hidden = false
+        boomBoxLabel.hidden = true
+        whoopeeLabel.hidden = true
     }
     
     
@@ -59,6 +68,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         let boomBox = UIImage(named: "boombox1.png")
         self.listenButton.setImage(boomBox, forState: .Normal)
         self.object = "boombox"
+        carrotLabel.hidden = true
+        boomBoxLabel.hidden = false
+        whoopeeLabel.hidden = true
+        
     }
     
     
@@ -67,6 +80,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         let whoopee = UIImage(named: "whoopee1.png")
         self.listenButton.setImage(whoopee, forState: .Normal)
         self.object = "whoopee"
+        carrotLabel.hidden = true
+        boomBoxLabel.hidden = true
+        whoopeeLabel.hidden = false
     }
     
 //    @IBAction func pickWhoopee() {
