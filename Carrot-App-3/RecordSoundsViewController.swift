@@ -64,7 +64,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     @IBAction func pickBoomBox() {
-        self.objectAverage = -1
+        self.objectAverage = -3
         let boomBox = UIImage(named: "boombox1.png")
         self.listenButton.setImage(boomBox, forState: .Normal)
         self.object = "boombox"
@@ -76,7 +76,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     @IBAction func pickWhoopee() {
-        self.objectAverage = -40
+        self.objectAverage = -35
         let whoopee = UIImage(named: "whoopee1.png")
         self.listenButton.setImage(whoopee, forState: .Normal)
         self.object = "whoopee"
@@ -134,14 +134,16 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     }, completion: nil)
                     self.audioRecorder.meteringEnabled = true
                     self.audioRecorder.record()
-                    NSThread.sleepForTimeInterval(0.5) // Replace with delay and include all the functions between here and the second delay.
-                    self.audioRecorder.updateMeters()
-                    self.audioRecorder.stop()
-                    self.audioRecorder.averagePowerForChannel(0)
-                    //print(self.audioRecorder.averagePowerForChannel(0)
-                    self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
-                    self.delay(2.5) {
-                        self.flowTest()
+//                    NSThread.sleepForTimeInterval(0.5) // Replace with delay and include all the functions between here and the second delay.
+                    self.delay(1.0){
+                        self.audioRecorder.updateMeters()
+                        self.audioRecorder.stop()
+                        self.audioRecorder.averagePowerForChannel(0)
+                        //print(self.audioRecorder.averagePowerForChannel(0)
+                        self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
+                        self.delay(2.5) {
+                            self.flowTest()
+                        }
                     }
                     
                 }else {
