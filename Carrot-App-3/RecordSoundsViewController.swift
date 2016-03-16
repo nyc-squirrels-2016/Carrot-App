@@ -20,7 +20,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var carrotLabel: UILabel!
     @IBOutlet weak var boomBoxLabel: UILabel!
     @IBOutlet weak var whoopeeLabel: UILabel!
-
+    
+    
     
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
@@ -28,11 +29,18 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var objectAverage: Int = -30
     var object = "carrot"
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         listeningLabel.hidden = true
         boomBoxLabel.hidden = true
         whoopeeLabel.hidden = true
+        carrotLabel.adjustsFontSizeToFitWidth = true
+        carrotLabel.minimumScaleFactor = 0.2
+        boomBoxLabel.adjustsFontSizeToFitWidth = true
+        boomBoxLabel.minimumScaleFactor = 0.2
+        whoopeeLabel.adjustsFontSizeToFitWidth = true
+        whoopeeLabel.minimumScaleFactor = 0.2
     }
     
     override func shouldAutorotate() -> Bool {
