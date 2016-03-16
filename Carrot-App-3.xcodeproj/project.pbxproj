@@ -12,6 +12,7 @@
 		0905079A1C988B7C001F6625 /* StartWhoopeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090507991C988B7C001F6625 /* StartWhoopeeViewController.swift */; };
 		0988A3D41C973CC9000593EC /* DontEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0988A3D31C973CC9000593EC /* DontEatViewController.swift */; };
 		0988A3D61C974C36000593EC /* TakeBiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0988A3D51C974C36000593EC /* TakeBiteViewController.swift */; };
+		099D95751C99A7DB00706D48 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D95741C99A7DB00706D48 /* InfoViewController.swift */; };
 		09CE598C1C938843004C7EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE598B1C938843004C7EF2 /* AppDelegate.swift */; };
 		09CE598E1C938843004C7EF2 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE598D1C938843004C7EF2 /* RecordSoundsViewController.swift */; };
 		09CE59911C938843004C7EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CE598F1C938843004C7EF2 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		090507991C988B7C001F6625 /* StartWhoopeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartWhoopeeViewController.swift; sourceTree = "<group>"; };
 		0988A3D31C973CC9000593EC /* DontEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DontEatViewController.swift; sourceTree = "<group>"; };
 		0988A3D51C974C36000593EC /* TakeBiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeBiteViewController.swift; sourceTree = "<group>"; };
+		099D95741C99A7DB00706D48 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		09CE59881C938843004C7EF2 /* Carrot-App-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrot-App-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CE598B1C938843004C7EF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09CE598D1C938843004C7EF2 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				090507951C9875CB001F6625 /* PlayBoomBoxViewController.swift */,
 				090507971C98896D001F6625 /* NoAnimationViewController.swift */,
 				090507991C988B7C001F6625 /* StartWhoopeeViewController.swift */,
+				099D95741C99A7DB00706D48 /* InfoViewController.swift */,
 			);
 			path = "Carrot-App-3";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				0988A3D61C974C36000593EC /* TakeBiteViewController.swift in Sources */,
 				09CE59AC1C939B2F004C7EF2 /* RecordedAudio.swift in Sources */,
 				09CE598E1C938843004C7EF2 /* RecordSoundsViewController.swift in Sources */,
+				099D95751C99A7DB00706D48 /* InfoViewController.swift in Sources */,
 				09CE598C1C938843004C7EF2 /* AppDelegate.swift in Sources */,
 				090507981C98896D001F6625 /* NoAnimationViewController.swift in Sources */,
 				0905079A1C988B7C001F6625 /* StartWhoopeeViewController.swift in Sources */,
