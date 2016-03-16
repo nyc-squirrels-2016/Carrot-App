@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--dontWhoopee-->
@@ -14,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5j0-Vm-qrT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wnU-sp-AWg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whoopee1" translatesAutoresizingMaskIntoConstraints="NO" id="x77-3f-dZc">
@@ -67,7 +69,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="FBO-eU-NIO"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="FBO-eU-NIO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEe-b7-IWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-329" y="938"/>
+            <point key="canvasLocation" x="-616.875" y="990.84507042253517"/>
         </scene>
         <!--startWhoopee-->
         <scene sceneID="Vkx-lf-mns">
@@ -87,7 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="10N-j7-VQR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CoL-JN-sIy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whoopee1" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-tR-9D2">
@@ -133,7 +135,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="wNQ-4X-mRA"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="wNQ-4X-mRA"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whoopee2" translatesAutoresizingMaskIntoConstraints="NO" id="5tH-Ee-GeX">
@@ -148,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVf-6H-buL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="1225"/>
+            <point key="canvasLocation" x="46.875" y="1294.0140845070421"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -159,11 +161,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ll-3D-hKD">
-                                <rect key="frame" x="88" y="432" width="145" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ll-3D-hKD">
+                                <rect key="frame" x="231" y="451" width="139" height="39"/>
                                 <attributedString key="attributedText">
                                     <fragment content="listening...">
                                         <attributes>
@@ -175,8 +177,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK6-ru-2PR">
-                                <rect key="frame" x="16" y="74" width="289" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK6-ru-2PR">
+                                <rect key="frame" x="159" y="74" width="283" height="52"/>
                                 <attributedString key="attributedText">
                                     <fragment content="press the carrot">
                                         <attributes>
@@ -188,8 +190,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPD-I3-qqi">
-                                <rect key="frame" x="7" y="74" width="306" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPD-I3-qqi">
+                                <rect key="frame" x="148" y="76" width="304" height="46"/>
                                 <attributedString key="attributedText">
                                     <fragment content="press the boombox">
                                         <attributes>
@@ -201,45 +203,51 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4R-Oy-WhN">
-                                <rect key="frame" x="10" y="134" width="300" height="300"/>
-                                <state key="normal" image="carrot-img"/>
-                                <connections>
-                                    <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="SiQ-e3-QCe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxB-e5-YdR">
-                                <rect key="frame" x="120" y="488" width="80" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxB-e5-YdR">
+                                <rect key="frame" x="255" y="514" width="90" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SxB-e5-YdR" secondAttribute="height" multiplier="45:28" id="whT-Xs-Iia"/>
+                                </constraints>
                                 <state key="normal" image="boombox0"/>
                                 <connections>
                                     <action selector="pickBoomBox" destination="BYZ-38-t0r" eventType="touchUpInside" id="OnB-er-rCy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-W9-NJD">
-                                <rect key="frame" x="51" y="485" width="56" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-W9-NJD">
+                                <rect key="frame" x="39" y="514" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zCO-W9-NJD" secondAttribute="height" multiplier="1:1" id="Z3B-Oc-Qzs"/>
+                                    <constraint firstAttribute="width" constant="56" id="ago-0k-B4D"/>
+                                    <constraint firstAttribute="height" constant="56" id="svw-QO-0d3"/>
+                                </constraints>
                                 <state key="normal" image="carrot-img"/>
                                 <connections>
                                     <action selector="pickCarrot" destination="BYZ-38-t0r" eventType="touchUpInside" id="Usn-zJ-AaV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPV-lR-0iS">
-                                <rect key="frame" x="221" y="485" width="56" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPV-lR-0iS">
+                                <rect key="frame" x="494" y="514" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="8FJ-9k-NjG"/>
+                                    <constraint firstAttribute="width" secondItem="iPV-lR-0iS" secondAttribute="height" multiplier="1:1" id="V1l-Rl-TBN"/>
+                                    <constraint firstAttribute="width" constant="56" id="h4p-b7-AHc"/>
+                                </constraints>
                                 <state key="normal" image="whoopee0"/>
                                 <connections>
                                     <action selector="pickWhoopee" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zd-Sc-bBf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-wO-WyQ">
-                                <rect key="frame" x="288" y="20" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-wO-WyQ">
+                                <rect key="frame" x="548" y="30" width="22" height="22"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3qE-Cc-X7S" kind="modal" id="Sbc-Wj-NfU"/>
+                                    <segue destination="3qE-Cc-X7S" kind="presentation" id="Sbc-Wj-NfU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTQ-gs-73I">
-                                <rect key="frame" x="53" y="72" width="214" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTQ-gs-73I">
+                                <rect key="frame" x="194" y="74" width="213" height="46"/>
                                 <attributedString key="attributedText">
                                     <fragment content="go whoopee!">
                                         <attributes>
@@ -251,8 +259,52 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4R-Oy-WhN">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <state key="normal" image="carrot-img"/>
+                                <connections>
+                                    <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="SiQ-e3-QCe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iPV-lR-0iS" secondAttribute="bottom" constant="30" id="1Pr-74-1Ju"/>
+                            <constraint firstItem="iPV-lR-0iS" firstAttribute="top" secondItem="4Ll-3D-hKD" secondAttribute="bottom" constant="1" id="1fX-bj-ClI"/>
+                            <constraint firstItem="zCO-W9-NJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="7HE-3v-VC8"/>
+                            <constraint firstItem="SxB-e5-YdR" firstAttribute="height" secondItem="iPV-lR-0iS" secondAttribute="height" id="AJS-pE-0hX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ezq-wO-WyQ" secondAttribute="trailing" constant="10" id="E1D-FR-itr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SxB-e5-YdR" secondAttribute="bottom" constant="30" id="Efr-EQ-b8Q"/>
+                            <constraint firstItem="m4R-Oy-WhN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GiZ-3X-26N"/>
+                            <constraint firstItem="gTQ-gs-73I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="VAD-QL-8ce"/>
+                            <constraint firstItem="SxB-e5-YdR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yal-sF-VTH"/>
+                            <constraint firstItem="uPD-I3-qqi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="azW-bw-p9Q"/>
+                            <constraint firstItem="4Ll-3D-hKD" firstAttribute="top" secondItem="m4R-Oy-WhN" secondAttribute="bottom" constant="-14" id="bhp-SR-I2g"/>
+                            <constraint firstItem="m4R-Oy-WhN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ca9-hE-Pjc"/>
+                            <constraint firstItem="TK6-ru-2PR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="dRl-sg-Hwj"/>
+                            <constraint firstItem="gTQ-gs-73I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fki-cJ-Fxv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Ll-3D-hKD" secondAttribute="bottom" constant="110" id="hXJ-9d-BAW"/>
+                            <constraint firstItem="SxB-e5-YdR" firstAttribute="centerX" secondItem="m4R-Oy-WhN" secondAttribute="centerX" id="jJj-tY-5fG"/>
+                            <constraint firstItem="Ezq-wO-WyQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="k7S-Eg-ecG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zCO-W9-NJD" secondAttribute="bottom" constant="30" id="kdZ-Io-JCD"/>
+                            <constraint firstItem="4Ll-3D-hKD" firstAttribute="centerX" secondItem="m4R-Oy-WhN" secondAttribute="centerX" id="l6U-o2-u2k"/>
+                            <constraint firstItem="uPD-I3-qqi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n5k-cT-gER"/>
+                            <constraint firstItem="zCO-W9-NJD" firstAttribute="top" secondItem="4Ll-3D-hKD" secondAttribute="bottom" constant="1" id="pcd-dN-RyX"/>
+                            <constraint firstItem="SxB-e5-YdR" firstAttribute="top" secondItem="4Ll-3D-hKD" secondAttribute="bottom" constant="1" id="qMG-dc-Hla"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iPV-lR-0iS" secondAttribute="trailing" constant="30" id="rPC-bu-Rrk"/>
+                            <constraint firstItem="SxB-e5-YdR" firstAttribute="top" secondItem="4Ll-3D-hKD" secondAttribute="bottom" constant="1" id="uTX-x7-EQ4"/>
+                            <constraint firstItem="TK6-ru-2PR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wyf-Vc-7RX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bhp-SR-I2g"/>
+                                <exclude reference="pcd-dN-RyX"/>
+                                <exclude reference="Yal-sF-VTH"/>
+                                <exclude reference="qMG-dc-Hla"/>
+                                <exclude reference="uTX-x7-EQ4"/>
+                                <exclude reference="1fX-bj-ClI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="boomBoxLabel" destination="uPD-I3-qqi" id="Hpv-Ag-Jh8"/>
@@ -263,17 +315,17 @@
                         <outlet property="listenButton" destination="m4R-Oy-WhN" id="Zze-Cy-PKO"/>
                         <outlet property="listeningLabel" destination="4Ll-3D-hKD" id="yjV-1z-QrO"/>
                         <outlet property="whoopeeLabel" destination="gTQ-gs-73I" id="fAk-Js-54P"/>
-                        <segue destination="JQw-Ah-F07" kind="modal" identifier="toDontEat" id="vi4-Kr-Z1A"/>
-                        <segue destination="Lm6-My-5Re" kind="modal" identifier="toTakeaBite" id="cx7-aq-ffv"/>
-                        <segue destination="kLH-Le-jLa" kind="modal" identifier="toPlayBoomBox" id="IoS-29-lyW"/>
-                        <segue destination="zHF-vo-Xml" kind="modal" identifier="toDontPlayBoomBox" id="vGq-MS-MAG"/>
-                        <segue destination="pTl-dZ-BmK" kind="modal" identifier="toDontWhoopee" id="duR-pC-Vbb"/>
-                        <segue destination="Brg-3Q-SyH" kind="modal" identifier="toStartWhoopee" id="wjv-rf-A7n"/>
+                        <segue destination="JQw-Ah-F07" kind="presentation" identifier="toDontEat" id="vi4-Kr-Z1A"/>
+                        <segue destination="Lm6-My-5Re" kind="presentation" identifier="toTakeaBite" id="cx7-aq-ffv"/>
+                        <segue destination="kLH-Le-jLa" kind="presentation" identifier="toPlayBoomBox" id="IoS-29-lyW"/>
+                        <segue destination="zHF-vo-Xml" kind="presentation" identifier="toDontPlayBoomBox" id="vGq-MS-MAG"/>
+                        <segue destination="pTl-dZ-BmK" kind="presentation" identifier="toDontWhoopee" id="duR-pC-Vbb"/>
+                        <segue destination="Brg-3Q-SyH" kind="presentation" identifier="toStartWhoopee" id="wjv-rf-A7n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73" y="418"/>
+            <point key="canvasLocation" x="136.875" y="441.54929577464787"/>
         </scene>
         <!--dontPlayBoomBox-->
         <scene sceneID="JaS-0y-34J">
@@ -284,7 +336,7 @@
                         <viewControllerLayoutGuide type="bottom" id="V9d-fL-hd3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AjO-tF-WEk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boombox1" translatesAutoresizingMaskIntoConstraints="NO" id="xtn-7B-Tsi">
@@ -337,7 +389,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="ZSz-dh-9DB"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ZSz-dh-9DB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -346,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8f-1K-OgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-184" y="-363"/>
+            <point key="canvasLocation" x="-345" y="-383.45070422535207"/>
         </scene>
         <!--playBoomBox-->
         <scene sceneID="UJf-e0-rIY">
@@ -357,7 +409,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8IM-gk-tIQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1S6-ym-1ej">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boombox1" translatesAutoresizingMaskIntoConstraints="NO" id="q4n-As-GFB">
@@ -406,7 +458,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="epx-do-RBe"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="epx-do-RBe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -418,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGw-uK-41J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179" y="-363"/>
+            <point key="canvasLocation" x="335.625" y="-383.45070422535207"/>
         </scene>
         <!--takeBite-->
         <scene sceneID="5E3-aW-vac">
@@ -429,7 +481,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QAH-R7-rpx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QBU-ma-Fdp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="it's loud enough..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKE-FX-Z60">
@@ -459,7 +511,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="peO-OB-1za"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="peO-OB-1za"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="carrot-bite-6" translatesAutoresizingMaskIntoConstraints="NO" id="Qlw-Mf-oUc">
@@ -511,7 +563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxw-Pr-TI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="130"/>
+            <point key="canvasLocation" x="1033.125" y="137.32394366197181"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="blm-8n-NLz">
@@ -522,7 +574,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WMp-2G-B7E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yfu-XS-K0n">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info-popup" translatesAutoresizingMaskIntoConstraints="NO" id="guE-5s-iXM">
@@ -535,7 +587,7 @@
                                     <color key="titleColor" red="1" green="0.59977992739999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="W8Q-ER-8R3"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="W8Q-ER-8R3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -544,7 +596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3do-Tw-C8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367" y="1401"/>
+            <point key="canvasLocation" x="688.125" y="1479.9295774647887"/>
         </scene>
         <!--toDontEat-->
         <scene sceneID="Py9-vj-71j">
@@ -555,7 +607,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YC4-77-ZcG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qO2-K7-0LJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkS-In-yea">
@@ -605,7 +657,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="7cr-LL-nme"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="7cr-LL-nme"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="carrot-img" translatesAutoresizingMaskIntoConstraints="NO" id="rpI-7R-WZu">
@@ -621,7 +673,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQC-N3-EMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="774"/>
+            <point key="canvasLocation" x="1033.125" y="817.6056338028169"/>
         </scene>
     </scenes>
     <resources>
