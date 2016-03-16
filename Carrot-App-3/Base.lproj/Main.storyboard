@@ -689,15 +689,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-popup" translatesAutoresizingMaskIntoConstraints="NO" id="guE-5s-iXM">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <rect key="frame" x="150" y="100" width="300" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Okz-si-xy6"/>
-                                    <constraint firstAttribute="width" constant="300" id="fKW-hp-nDf"/>
+                                    <constraint firstAttribute="width" secondItem="guE-5s-iXM" secondAttribute="height" multiplier="13:16" constant="-25" id="Ehm-cU-L7b"/>
+                                    <constraint firstAttribute="height" constant="500" id="Okz-si-xy6"/>
+                                    <constraint firstAttribute="width" secondItem="guE-5s-iXM" secondAttribute="height" multiplier="175:219" id="aLW-Wd-nA3"/>
+                                    <constraint firstAttribute="height" constant="400" id="dXD-DA-qQu"/>
+                                    <constraint firstAttribute="width" constant="400" id="fKW-hp-nDf"/>
+                                    <constraint firstAttribute="width" constant="350" id="fTq-qc-uYM"/>
+                                    <constraint firstAttribute="height" constant="400" id="fkY-hq-W8Z"/>
                                     <constraint firstAttribute="width" secondItem="guE-5s-iXM" secondAttribute="height" multiplier="1:1" id="i48-UU-ehU"/>
+                                    <constraint firstAttribute="width" constant="300" id="kdW-jN-LDm"/>
+                                    <constraint firstAttribute="height" constant="438" id="pNX-92-Pba"/>
+                                    <constraint firstAttribute="width" constant="325" id="vYa-9o-7kn"/>
+                                    <constraint firstAttribute="width" secondItem="guE-5s-iXM" secondAttribute="height" multiplier="4:5" id="y81-o9-caF"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Okz-si-xy6"/>
+                                        <exclude reference="aLW-Wd-nA3"/>
+                                        <exclude reference="dXD-DA-qQu"/>
+                                        <exclude reference="fKW-hp-nDf"/>
+                                        <exclude reference="fTq-qc-uYM"/>
+                                        <exclude reference="i48-UU-ehU"/>
+                                        <exclude reference="pNX-92-Pba"/>
+                                        <exclude reference="vYa-9o-7kn"/>
+                                        <exclude reference="y81-o9-caF"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHJ-wG-e9a">
-                                <rect key="frame" x="420" y="150" width="30" height="30"/>
+                                <rect key="frame" x="420" y="100" width="30" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" red="1" green="0.59977992739999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -711,19 +733,27 @@
                         <constraints>
                             <constraint firstItem="guE-5s-iXM" firstAttribute="centerY" secondItem="yfu-XS-K0n" secondAttribute="centerY" id="5Ok-vO-yql"/>
                             <constraint firstItem="guE-5s-iXM" firstAttribute="top" secondItem="aHJ-wG-e9a" secondAttribute="bottom" constant="-30" id="O9b-bI-EZs"/>
+                            <constraint firstItem="guE-5s-iXM" firstAttribute="top" secondItem="aHJ-wG-e9a" secondAttribute="bottom" constant="-30" id="P8p-6n-lb3"/>
+                            <constraint firstItem="guE-5s-iXM" firstAttribute="centerX" secondItem="yfu-XS-K0n" secondAttribute="centerX" id="Q1X-b0-vlR"/>
                             <constraint firstItem="guE-5s-iXM" firstAttribute="centerX" secondItem="yfu-XS-K0n" secondAttribute="centerX" id="Srw-LR-gDb"/>
                             <constraint firstItem="guE-5s-iXM" firstAttribute="centerY" secondItem="yfu-XS-K0n" secondAttribute="centerY" id="bNc-uL-sl7"/>
+                            <constraint firstItem="aHJ-wG-e9a" firstAttribute="leading" secondItem="guE-5s-iXM" secondAttribute="trailing" constant="-30" id="cLB-oE-U0q"/>
                             <constraint firstItem="aHJ-wG-e9a" firstAttribute="leading" secondItem="guE-5s-iXM" secondAttribute="trailing" constant="-40" id="e24-LC-Fgk"/>
+                            <constraint firstItem="guE-5s-iXM" firstAttribute="centerY" secondItem="yfu-XS-K0n" secondAttribute="centerY" id="kf2-f0-Q90"/>
                             <constraint firstItem="aHJ-wG-e9a" firstAttribute="leading" secondItem="guE-5s-iXM" secondAttribute="trailing" constant="-30" id="nej-Nb-Twk"/>
                             <constraint firstItem="guE-5s-iXM" firstAttribute="centerX" secondItem="yfu-XS-K0n" secondAttribute="centerX" id="tvr-j7-kDx"/>
                             <constraint firstItem="guE-5s-iXM" firstAttribute="top" secondItem="aHJ-wG-e9a" secondAttribute="bottom" constant="-40" id="zWz-WX-8zv"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="5Ok-vO-yql"/>
+                                <exclude reference="O9b-bI-EZs"/>
                                 <exclude reference="Srw-LR-gDb"/>
                                 <exclude reference="bNc-uL-sl7"/>
+                                <exclude reference="tvr-j7-kDx"/>
                                 <exclude reference="zWz-WX-8zv"/>
                                 <exclude reference="e24-LC-Fgk"/>
+                                <exclude reference="nej-Nb-Twk"/>
                             </mask>
                         </variation>
                     </view>
@@ -841,13 +871,13 @@
         <image name="carrot-bite-5" width="300" height="300"/>
         <image name="carrot-bite-6" width="300" height="300"/>
         <image name="carrot-img" width="300" height="300"/>
-        <image name="info-popup" width="400" height="400"/>
+        <image name="info-popup" width="400" height="500"/>
         <image name="whoopee0" width="200" height="181"/>
         <image name="whoopee1" width="300" height="300"/>
         <image name="whoopee2" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wNQ-4X-mRA"/>
+        <segue reference="W8Q-ER-8R3"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

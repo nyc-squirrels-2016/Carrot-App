@@ -24,7 +24,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     var audioRecorder: AVAudioRecorder!
-    var recordedAudio: RecordedAudio!
     var roomAverage: Float = 0.0
     var objectAverage: Int = -30
     var object = "carrot"
@@ -37,10 +36,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         whoopeeLabel.hidden = true
         carrotLabel.adjustsFontSizeToFitWidth = true
         carrotLabel.minimumScaleFactor = 0.2
-        boomBoxLabel.adjustsFontSizeToFitWidth = true
-        boomBoxLabel.minimumScaleFactor = 0.2
-        whoopeeLabel.adjustsFontSizeToFitWidth = true
-        whoopeeLabel.minimumScaleFactor = 0.2
     }
     
     override func shouldAutorotate() -> Bool {
@@ -93,12 +88,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         whoopeeLabel.hidden = false
     }
     
-//    @IBAction func pickWhoopee() {
-//        self.objectAverage = -40
-//        let whoopee = UIImage(named: "whoopee0.png")
-//        self.listenButton.setImage(whoopee, forState: .Normal)
-//    }
-    
     
     
     
@@ -142,12 +131,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     }, completion: nil)
                     self.audioRecorder.meteringEnabled = true
                     self.audioRecorder.record()
-//                    NSThread.sleepForTimeInterval(0.5) // Replace with delay and include all the functions between here and the second delay.
                     self.delay(1.0){
                         self.audioRecorder.updateMeters()
                         self.audioRecorder.stop()
                         self.audioRecorder.averagePowerForChannel(0)
-                        //print(self.audioRecorder.averagePowerForChannel(0)
                         self.roomAverage = self.audioRecorder.averagePowerForChannel(0)
                         self.delay(2.5) {
                             self.flowTest()
@@ -155,7 +142,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                     }
                     
                 }else {
-                    //print("Recording Failed")
                     // Add error handling or at the very least error messaging
                 }
             })
