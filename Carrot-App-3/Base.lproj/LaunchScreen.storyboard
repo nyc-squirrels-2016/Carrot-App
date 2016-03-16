@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -14,22 +14,28 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carrot-img" translatesAutoresizingMaskIntoConstraints="NO" id="HCB-t8-cTY">
-                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carrot-img" translatesAutoresizingMaskIntoConstraints="NO" id="HCB-t8-cTY">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carrot-app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Dv-9c-vHK">
-                                <rect key="frame" x="13" y="448" width="294" height="46"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carrot-app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Dv-9c-vHK">
+                                <rect key="frame" x="6" y="420" width="588" height="112"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="0Dv-9c-vHK" secondAttribute="bottom" constant="68" id="2Iw-SK-bb6"/>
+                            <constraint firstItem="HCB-t8-cTY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Lcv-qX-m1R"/>
+                            <constraint firstItem="0Dv-9c-vHK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SaP-IC-Bgr"/>
+                            <constraint firstItem="HCB-t8-cTY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="v6o-Zl-KWm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="355"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
     <resources>
