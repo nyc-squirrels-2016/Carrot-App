@@ -67,7 +67,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     @IBAction func pickBoomBox() {
-        self.objectAverage = -3
+        self.objectAverage = -5
         let boomBox = UIImage(named: "boombox1.png")
         self.listenButton.setImage(boomBox, forState: .Normal)
         self.object = "boombox"
@@ -79,7 +79,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     @IBAction func pickWhoopee() {
-        self.objectAverage = -35
+        self.objectAverage = -25
         let whoopee = UIImage(named: "whoopee1.png")
         self.listenButton.setImage(whoopee, forState: .Normal)
         self.object = "whoopee"
